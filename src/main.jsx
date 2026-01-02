@@ -1,0 +1,11 @@
+import { StrictMode } from 'react'
+import App from './App.jsx'
+import Context from './components/Context/Context.jsx'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+
+createRoot(document.getElementById('root')).render(
+  <Context>
+    <App />
+  </Context>,
+)

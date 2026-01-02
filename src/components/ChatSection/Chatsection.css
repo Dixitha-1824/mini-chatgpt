@@ -1,0 +1,169 @@
+#chatsec {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--chat-bg);
+  color: var(--color);
+  transition: background 0.3s ease, color 0.3s ease;
+  padding: 25px 50px;
+}
+
+.txt {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color);
+  border-radius: 12px;
+}
+
+.top-sec {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+  max-height: 60vh;
+  padding: 10px 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-blue) transparent;
+}
+
+.message {
+  max-width: 70%;
+  padding: 12px 16px;
+  margin: 8px 0;
+  border-radius: 18px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  font-size: 13px;
+  animation: fadeIn 0.3s ease;
+}
+
+.user-msg {
+  align-self: flex-end;
+  background-color: var(--accent-blue);
+  color: white;
+  font-weight:bolder;
+  border-bottom-right-radius: 5px;
+}
+
+.bot-msg {
+  align-self: flex-start;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color);
+  border-bottom-left-radius: 5px;
+}
+
+.inp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 20px;
+}
+
+.inp input {
+  width: 70%;
+  height: 45px;
+  border: 1px solid var(--input-border);
+  outline: none;
+  border-radius: 30px;
+  padding: 0 20px;
+  font-size: 16px;
+  background-color: var(--input-bg);
+  color: var(--color);
+  transition: all 0.25s ease;
+}
+
+/* Placeholder */
+.inp input::placeholder {
+  color: var(--input-placeholder);
+}
+
+/* Hover effect */
+.inp input:hover {
+  border-color: var(--accent-blue);
+}
+
+/* Focus effect */
+.inp input:focus {
+  border-color: var(--input-focus-border);
+  background-color: var(--input-focus-bg);
+  box-shadow: 0 0 5px var(--input-focus-border);
+}
+
+/* ===== Send Button ===== */
+.inp button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  height: 45px;
+  width: 45px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--accent-blue);
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  font-size: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.inp button:hover {
+  transform: scale(1.1);
+}
+
+.inp button:focus {
+  outline: none;
+}
+
+/* ===== Loader Animation ===== */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.loader span {
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent-blue);
+  border-radius: 50%;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* ===== Animations ===== */
+@keyframes bounce {
+  to {
+    opacity: 0.3;
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
