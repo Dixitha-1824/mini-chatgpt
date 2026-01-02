@@ -1,6 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 
-const API = "AIzaSyCBnXK6oQakmwuJlajp_VkxRPEaD2V8ZCQ";
+const API = import.meta.env.VITE_GEMINI_API_KEY;
+
 
 export async function runGemini(prompt) {
   const ai = new GoogleGenAI({
