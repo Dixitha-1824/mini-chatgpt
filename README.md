@@ -1,16 +1,32 @@
-# React + Vite
+# Mini ChatGPT Clone 🤖
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A ChatGPT-like web application built using **React** and **Google Gemini API**.  
+This project allows users to interact with an AI chatbot, view previous chats, and switch between dark and light modes.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
+https://minivchatgpt.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Features
+- AI-powered chat using Google Gemini API
+- Streaming AI responses
+- Chat history sidebar
+- Load previous conversations
+- Start a new chat anytime
+- Dark / Light mode toggle
+- Clean and responsive UI
 
-## React Compiler
+##  Tech Stack
+- React (Vite)
+- Context API
+- JavaScript
+- CSS
+- Google Gemini API
+- Netlify (Deployment)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+##  How It Works
+1. User enters a prompt
+2. Prompt is sent to the Gemini API
+3. Response is streamed back in real-time
+4. Chat history is stored using Context API
+5. Previous chats can be accessed from the sidebar
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
